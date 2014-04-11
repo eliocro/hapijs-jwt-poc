@@ -1,0 +1,24 @@
+
+<h3>Payments</h3>
+<div ng-include="'./partials/user.html'"></div>
+
+<table class="table" ng-show="payments">
+  <thead>
+    <tr>
+      <th>Reference</th>
+      <th>Amount</th>
+      <th>Currency</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in payments">
+      <th>#{{item.reference}}</th>
+      <th>{{item.amount}}</th>
+      <th>{{item.currency}}</th>
+      <th>{{item.description}}</th>
+      <th>{{item.status}}</th>
+    </tr>
+  </tbody>
+</table>

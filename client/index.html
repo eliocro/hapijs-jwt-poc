@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>JWT demo</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <style>
+    .bs-callout {
+      margin: 20px 0;
+      padding: 10px 20px;
+      border-left: 3px solid #eee;
+    }
+    .bs-callout-danger {
+      background-color: #fdf7f7;
+      border-color: #d9534f;
+    }
+    .bs-callout-info {
+      background-color: #f4f8fa;
+      border-color: #5bc0de;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <br>
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">Angularjs + Hapijs JWT demo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/">Payments</a></li>
+            <li><a href="#/customers">Customers</a></li>
+            <li><a ng-show="isLoggedIn()" href="#/logout">Logout</a></li>
+            <li><a ng-show="!isLoggedIn()" href="#/login">Login</a></li>
+        </div>
+      </div>
+    </nav>
+    <div ng-view></div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-cookies.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

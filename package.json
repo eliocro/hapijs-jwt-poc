@@ -1,0 +1,15 @@
+{
+  "name": "jwt-auth-poc",
+  "description": "Hapijs JWT POC",
+  "version": "0.1.0",
+  "main": "server",
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "dependencies": {
+    "hapi": "3.x.x",
+    "hapi-auth-jwt": "0.1.x",
+    "jsonwebtoken": "0.2.x",
+    "moment": "2.5.x"
+  }
+}

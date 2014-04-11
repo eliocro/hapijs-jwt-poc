@@ -1,0 +1,22 @@
+
+<h3>Customers</h3>
+<div ng-include="'./partials/user.html'"></div>
+
+<table class="table" ng-show="customers">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Status</th>
+      <th>Joined</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in customers">
+      <th>{{item.firstName}} {{item.lastName}}</th>
+      <th>{{item.email}}</th>
+      <th>{{item.status}}</th>
+      <th>{{item.meta.created_at|date:'yyyy.MM.dd HH.mm'}}</th>
+    </tr>
+  </tbody>
+</table>
