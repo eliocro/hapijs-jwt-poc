@@ -4,7 +4,9 @@ var hapi = require('hapi');
 var auth = require('./auth');
 var router = require('./router');
 
-var server = hapi.createServer('0.0.0.0', 5000, {cors: true});
+var port = process.env.PORT || 5000;
+
+var server = hapi.createServer('0.0.0.0', port, {cors: true});
 
 // Plugins
 server.pack.require('hapi-auth-jwt', function (err) {
